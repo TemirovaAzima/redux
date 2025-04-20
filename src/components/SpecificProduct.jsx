@@ -1,8 +1,8 @@
 import React from 'react'
 import {useGetProductByIdQuery} from "../app/services/dummydata.js";
 
-const SpecificProduct = () => {
-    const {data,isError,isLoading} = useGetProductByIdQuery(3)
+const SpecificProduct = (props) => {
+    const {data,isError,isLoading} = useGetProductByIdQuery(props.id)
     console.log(data)
     if(isError){
         return <h1>Error</h1>

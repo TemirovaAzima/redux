@@ -5,8 +5,8 @@ import SpecificProduct from "./components/SpecificProduct.jsx";
 const App = () => {
     return (
         <div>
-          {/*<AllProducts/>*/}
-            <SpecificProduct/>
+          <AllProducts/>
+            {/*<SpecificProduct/>*/}
         </div>
     )
 }

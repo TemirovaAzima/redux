@@ -18,6 +18,14 @@ export const productApi = createApi({
                 method: "Post",
                 headers: {"Content-Type": "application/json"},
                 body: newProduct
+            }),
+        }),
+        updateProduct: builder.mutation({
+            query: ({id,updatedProduct}) =>({
+                url: `/products/${id}`,
+                method: "PUT",
+                headers: {"Content-Type": "application/json"},
+                body: updatedProduct
             })
         })
     })
@@ -27,3 +35,4 @@ export const productApi = createApi({
 export const useGetAllProductQuery = productApi.useGetAllProductQuery
 export const useGetProductByIdQuery = productApi.useGetProductByIdQuery
 export const useAddNewProductMutation = productApi.useAddNewProductMutation
+export const useUpdateNewProductMutation = productApi.useUpdateProductMutation

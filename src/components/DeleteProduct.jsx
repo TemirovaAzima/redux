@@ -2,16 +2,16 @@ import React from 'react'
 import {useDeleteProductMutation} from "../app/services/dummydata.js";
 
 const DeleteProduct = ({productId}) => {
-    const [deleteProduct,{data,isError,isLoading}] = useDeleteProductMutation();
+    const [deleteProduct, {data, isError, isLoading}] = useDeleteProductMutation();
 
-    if(isError) return <h1>Error occurred</h1>;
-    if(isLoading) return <h1>Loading...</h1>;
+    if (isError) return <h1>Error occurred</h1>;
+    if (isLoading) return <h1>Loading...</h1>;
 
-    const handleDeleteProduct = async ()=>{
-        try{
+    const handleDeleteProduct = async () => {
+        try {
             await deleteProduct(productId);
-        }catch(err){
-            console.error("Error deleting the produxt",err)
+        } catch (err) {
+            console.error("Error deleting the produxt", err)
         }
     }
     return (

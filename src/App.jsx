@@ -1,5 +1,6 @@
 import React from 'react'
-import UpdateProduct from "./components/UpdateProduct.jsx";
+// import UpdateProduct from "./components/UpdateProduct.jsx";
+import DeleteProduct from "./components/DeleteProduct.jsx";
 // import Counter from './components/Counter.jsx'
 // import AllProducts from "./components/AllProducts.jsx";
 // import SpecificProduct from "./components/SpecificProduct.jsx";
@@ -10,7 +11,8 @@ const App = () => {
           {/*<AllProducts />*/}
           {/*  <SpecificProduct id={1}/>*/}
           {/*  <AddNewProduct/>*/}
-            <UpdateProduct productId={1}/>
+          {/*  <UpdateProduct productId={1}/>*/}
+            <DeleteProduct productId={2}/>
         </div>
     )
 }
